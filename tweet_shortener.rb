@@ -1,9 +1,19 @@
 def word_substituter(string)
   dictionary = {
-   hello:"hi",to:"2",two:"2",too:"2",for:"4",four:"4",become:"4",be:"b",you:"u",at:"@",and:"&"
-
- }
-  arr =[ ]
+     hello:
+     "hi",
+     to:"2",
+     two:"2",
+     too:"2",
+     for:"4",
+     four:"4",
+     become:"4",
+     be:"b",
+     you:"u",
+     at:"@",
+     and:"&"
+   }
+  arr =[]
   words = string.split
   words.each do |word|
   if   dictionary.has_key?(word.downcase.to_sym)
@@ -20,11 +30,11 @@ end
 
 def bulk_tweet_shortener(array)
 
-ar =[ ]
+  arr =[]
   array.each do |string|
- ar << word_substituter(string)
+    arr << word_substituter(string)
   end
- ar.each do |str|
+ arr.each do |str|
    puts "#{str}"
  end
 end
